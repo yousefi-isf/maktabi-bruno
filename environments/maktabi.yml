@@ -1,0 +1,8 @@
+name: maktabi
+variables:
+  - name: BACK_URL
+    value: http://localhost:4000
+    description: backend service address
+  - name: FRONT_URL
+    value: http://localhost:5173
+    description: frontend service address

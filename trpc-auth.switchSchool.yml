@@ -1,0 +1,24 @@
+info:
+  name: /trpc/auth.switchSchool
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{BACK_URL}}/trpc/auth.switchSchool"
+  headers:
+    - name: Origin
+      value: "{{FRONT_URL}}"
+  body:
+    type: json
+    data: |-
+      {
+        "schoolId" : "a1ee68e7-4b10-446e-a093-3b0b9a9dcc9e"  
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

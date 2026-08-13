@@ -1,0 +1,25 @@
+info:
+  name: /api/auth/sign-in/email
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BACK_URL}}/api/auth/sign-in/email"
+  headers:
+    - name: Origin
+      value: "{{FRONT_URL}}"
+  body:
+    type: json
+    data: |-
+      {
+        "email" : "m.yousefi.isf@gmail.com",
+        "password" : "yousefi@1234"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

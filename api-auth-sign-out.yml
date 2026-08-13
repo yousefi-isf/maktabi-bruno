@@ -1,0 +1,18 @@
+info:
+  name: /api/auth/sign-out
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BACK_URL}}/api/auth/sign-out"
+  headers:
+    - name: Origin
+      value: "{{FRONT_URL}}"
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
