@@ -13,7 +13,7 @@ http:
     type: json
     data: |-
       {
-        "schoolId" : "a1ee68e7-4b10-446e-a093-3b0b9a9dcc9e"  
+        "schoolId" : "b49fc8a6-c664-4568-ab4b-7ec15803fa11"  
       }
   auth: inherit
 

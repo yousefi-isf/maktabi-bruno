@@ -1,0 +1,30 @@
+info:
+  name: /trpc/users.invite
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BACK_URL}}/trpc/users.invite"
+  headers:
+    - name: Origin
+      value: "{{FRONT_URL}}"
+  body:
+    type: json
+    data: |-
+      {
+        "email": "email1@gmail.com",
+        "fullName": "کاربر تستی 1",
+        "nationalCode": "1274219344",
+        "phone": "09130199471",
+        "schoolId": "b49fc8a6-c664-4568-ab4b-7ec15803fa11",
+        "roleId": z.uuid(),
+        "academicYearId": z.uuid().optional(),
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

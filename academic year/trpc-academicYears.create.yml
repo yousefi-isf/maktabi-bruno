@@ -1,0 +1,36 @@
+info:
+  name: /trpc/academicYears.create
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{BACK_URL}}/trpc/academicYears.create"
+  headers:
+    - name: Origin
+      value: "{{FRONT_URL}}"
+  body:
+    type: json
+    data: |-
+      {
+        "json": {
+          "title": "1405-1406",
+          "startDate": "2026-09-23T00:00:00.000Z",
+          "endDate": "2027-06-22T00:00:00.000Z",
+          "isActive": true
+        },
+        "meta": {
+          "values": {
+            "startDate": ["Date"],
+            "endDate": ["Date"]
+          },
+          "v": 1
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
